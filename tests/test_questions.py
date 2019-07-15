@@ -12,4 +12,4 @@ setup()
 @mock_dynamodb2
 def test_questions_handler():
     # TODO response = h(api_gateway_event('POST', {}), None)
-    assert True
+    assert False
