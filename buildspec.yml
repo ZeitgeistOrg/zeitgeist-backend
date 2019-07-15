@@ -8,7 +8,7 @@ phases:
     commands:
       - pip install virtualenv
       - virtualenv venv
-      - source venv/bin/activate
+      - . venv/bin/activate # use a '.' instead of 'source' here
       - pip install -r requirements.txt
   pre_build:
     commands:
