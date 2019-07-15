@@ -166,6 +166,6 @@ def lambda_handler(event, context):
         if op == "GET":
             return respond(None, operations[op]())
         elif op == "POST":
-            return respond(None, operations[op](event['body']))
+            return respond(operations[op](event['body']))
     else:
         return respond(ValueError('Unsupported method "{}"'.format(op)))

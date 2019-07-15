@@ -1,0 +1,22 @@
+# this buildspec is for running tests!
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - pip install virtualenv
+      - virtualenv venv
+      - source venv/bin/active
+      - pip install -r requirements.txt
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre-build phases
+  build:
+    commands:
+      - echo Tests started on `date`
+      - python -m pytest
+  post_build:
+    commands:
+      - echo Tests completed on `date`
